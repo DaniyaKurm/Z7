@@ -1,4 +1,5 @@
 package ru.netology.statistics;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -15,4 +16,17 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void findMax_withMaxValueAtLastIndex() {
+        StatisticsService service = new StatisticsService();
+        long[] incomes = {5, 8, 4, 2, 9, 13, 17};
+        long expected = 17;
+        long actual = service.findMax(incomes);
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
+
+
+
